@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SAIRA cafe & bakery · Cieneguilla</title>
+  <meta name="description" content="Carrot cake con frutos secos, café y terraza en Cieneguilla. Arma tu pedido y envíalo por WhatsApp.">
+  <meta name="theme-color" content="#3A281C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#carta">Saltar a la carta</a>
+
+  <header class="top">
+    <a class="top__brand" href="#inicio" aria-label="SAIRA cafe & bakery, inicio">
+      <span class="top__name">SAIRA</span>
+      <span class="top__kind">cafe &amp; bakery</span>
+    </a>
+    <nav class="top__nav" id="menu-principal" aria-label="Secciones">
+      <a href="#como-pedir">Cómo pedir</a>
+      <a href="#carta">Carta</a>
+      <a href="#encargos">Encargos</a>
+      <a href="#terraza">Terraza</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="top__nav-call" href="tel:+51980820574">Llamar al 980 820 574</a>
+    </nav>
+    <a class="btn btn--wa top__cta" href="#carta">
+      <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+      <span>Pedir</span>
+    </a>
+    <button class="top__burger" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-toggle>
+      <span class="top__burger-lines" aria-hidden="true"></span>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 1 · Portada: el corte de la carrot cake, recorrido con el scroll -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__stage">
+        <canvas class="hero__canvas" aria-hidden="true"></canvas>
+
+        <!-- Respaldo ilustrado: se usa si aún no hay fotogramas o fallan al cargar -->
+        <svg class="hero__fallback" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <pattern id="crumb" width="22" height="22" patternUnits="userSpaceOnUse">
+              <circle cx="4" cy="6" r="2.2" fill="#9C4F17" opacity=".55"/>
+              <circle cx="15" cy="15" r="1.6" fill="#F0A35C" opacity=".7"/>
+              <circle cx="18" cy="4" r="1.2" fill="#6E3A12" opacity=".5"/>
+            </pattern>
+          </defs>
+          <rect class="fb-sky" width="1600" height="1000"/>
+          <g class="fb-hills">
+            <path d="M0 760 C220 640 380 660 560 720 S900 610 1100 680 1440 620 1600 660 V1000 H0Z" fill="#5E6B38"/>
+            <path d="M0 840 C260 770 520 800 760 850 S1240 780 1600 820 V1000 H0Z" fill="#4A5529"/>
+          </g>
+          <g class="fb-cake">
+            <g class="fb-body">
+              <rect x="330" y="300" width="760" height="120" rx="14" fill="#C8691F"/>
+              <rect x="330" y="300" width="760" height="120" rx="14" fill="url(#crumb)"/>
+              <rect x="330" y="418" width="760" height="34" fill="#F4F4F0"/>
+              <rect x="330" y="450" width="760" height="120" fill="#C8691F"/>
+              <rect x="330" y="450" width="760" height="120" fill="url(#crumb)"/>
+              <rect x="330" y="568" width="760" height="34" fill="#F4F4F0"/>
+              <rect x="330" y="600" width="760" height="120" rx="14" fill="#C8691F"/>
+              <rect x="330" y="600" width="760" height="120" rx="14" fill="url(#crumb)"/>
+              <path d="M318 304 C420 250 1000 250 1102 304 L1102 330 C1000 290 420 290 318 330Z" fill="#F4F4F0"/>
+            </g>
+            <g class="fb-slice">
+              <rect x="1100" y="300" width="250" height="120" rx="14" fill="#C8691F"/>
+              <rect x="1100" y="300" width="250" height="120" rx="14" fill="url(#crumb)"/>
+              <rect x="1100" y="418" width="250" height="34" fill="#F4F4F0"/>
+              <rect x="1100" y="450" width="250" height="120" fill="#C8691F"/>
+              <rect x="1100" y="450" width="250" height="120" fill="url(#crumb)"/>
+              <rect x="1100" y="568" width="250" height="34" fill="#F4F4F0"/>
+              <rect x="1100" y="600" width="250" height="120" rx="14" fill="#C8691F"/>
+              <rect x="1100" y="600" width="250" height="120" rx="14" fill="url(#crumb)"/>
+              <path d="M1092 304 C1150 270 1300 270 1360 304 L1360 330 C1300 292 1150 292 1092 330Z" fill="#F4F4F0"/>
+              <g fill="#6E3A12"><ellipse cx="1160" cy="282" rx="18" ry="11"/><ellipse cx="1230" cy="276" rx="16" ry="10" transform="rotate(-18 1230 276)"/><ellipse cx="1300" cy="284" rx="17" ry="10" transform="rotate(12 1300 284)"/></g>
+            </g>
+            <g fill="#6E3A12"><ellipse cx="460" cy="282" rx="18" ry="11"/><ellipse cx="610" cy="272" rx="16" ry="10" transform="rotate(-18 610 272)"/><ellipse cx="760" cy="270" rx="17" ry="10" transform="rotate(12 760 270)"/><ellipse cx="910" cy="274" rx="18" ry="11" transform="rotate(-8 910 274)"/><ellipse cx="1030" cy="284" rx="15" ry="9"/></g>
+          </g>
+        </svg>
+
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <div class="hero__step is-active" data-from="0" data-to="0.34">
+            <h1 id="hero-title" class="hero__title">Carrot cake con frutos secos.</h1>
+            <p class="hero__lead">SAIRA cafe &amp; bakery, en Cieneguilla.</p>
+          </div>
+          <div class="hero__step" data-from="0.34" data-to="0.68">
+            <p class="hero__title" aria-hidden="true">Capa a capa, con frosting y nueces.</p>
+          </div>
+          <div class="hero__step" data-from="0.68" data-to="1.01">
+            <p class="hero__title" aria-hidden="true">Pídela por WhatsApp o ven a la terraza.</p>
+            <div class="hero__actions">
+              <a class="btn btn--wa" href="#carta">
+                <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+                <span>Armar mi pedido</span>
+              </a>
+              <a class="btn btn--ghost" href="#terraza">Cómo llegar</a>
+            </div>
+          </div>
+        </div>
+
+        <ol class="hero__track" aria-hidden="true">
+          <li>El corte</li><li>Las capas</li><li>La terraza</li>
+        </ol>
+        <p class="hero__note">Animación 3D conceptual</p>
+      </div>
+    </section>
+
+    <!-- Franja animada con lo que hay en SAIRA -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Carrot cake</span><span>Café de la casa</span><span>Galletas</span><span>Iced latte</span><span>Frappé</span><span>Terraza en Cieneguilla</span>
+        <span>Carrot cake</span><span>Café de la casa</span><span>Galletas</span><span>Iced latte</span><span>Frappé</span><span>Terraza en Cieneguilla</span>
+      </div>
+    </div>
+
+    <!-- Cómo pedir: tres pasos reales del flujo -->
+    <section class="steps" id="como-pedir" aria-labelledby="pasos-title" data-anim>
+      <div class="steps__head">
+        <h2 id="pasos-title" class="h2">Cómo pedir</h2>
+        <p>Sin registrarte ni pagar en la web. Todo se confirma por WhatsApp con el local.</p>
+      </div>
+      <ol class="steps__list">
+        <li>
+          <svg class="steps__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 14h28M10 24h28M10 34h18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" fill="none"/></svg>
+          <h3>Elige en la carta</h3>
+          <p>Suma tajadas, tortas enteras, galletas o bebidas con los botones + y −.</p>
+        </li>
+        <li>
+          <svg class="steps__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+          <h3>Envía el mensaje</h3>
+          <p>Indica si recoges o pides entrega, y para cuándo. WhatsApp se abre con todo escrito.</p>
+        </li>
+        <li>
+          <svg class="steps__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 25l8 8 16-18" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <h3>Confirma y disfruta</h3>
+          <p>SAIRA te responde con disponibilidad y total. Pasas a recoger o lo recibes.</p>
+        </li>
+      </ol>
+      <div class="steps__actions">
+        <a class="btn btn--dark" href="#carta">Ir a la carta</a>
+        <a class="btn btn--line" href="#preguntas">Ver preguntas frecuentes</a>
+      </div>
+    </section>
+
+    <!-- 2 · Carta + pedido por WhatsApp -->
+    <section class="order" id="carta" aria-labelledby="carta-title" data-anim>
+      <div class="float-bg" aria-hidden="true">
+        <i class="fl fl--nut" style="--x:6%;--y:12%;--d:26s;--r:40deg"></i>
+        <i class="fl fl--crumb" style="--x:18%;--y:62%;--d:31s;--r:-20deg"></i>
+        <i class="fl fl--carrot" style="--x:41%;--y:8%;--d:24s;--r:65deg"></i>
+        <i class="fl fl--nut" style="--x:52%;--y:84%;--d:35s;--r:-50deg"></i>
+        <i class="fl fl--crumb" style="--x:63%;--y:30%;--d:28s;--r:15deg"></i>
+        <i class="fl fl--carrot" style="--x:88%;--y:72%;--d:33s;--r:-35deg"></i>
+        <i class="fl fl--nut" style="--x:93%;--y:18%;--d:29s;--r:80deg"></i>
+        <i class="fl fl--crumb" style="--x:30%;--y:92%;--d:37s;--r:5deg"></i>
+      </div>
+      <div class="order__menu">
+        <h2 id="carta-title" class="h2">Arma tu pedido</h2>
+        <p class="order__intro">Elige lo que quieres y te preparamos el mensaje para WhatsApp. El local confirma disponibilidad y total en el chat.</p>
+
+        <ul class="menu" data-menu>
+          <!-- Se completa desde js/app.js (PRODUCTS) -->
+        </ul>
+      </div>
+
+      <aside class="ticket" id="tu-pedido" aria-labelledby="ticket-title">
+        <h3 id="ticket-title" class="ticket__title">Tu pedido</h3>
+        <div class="ticket__lines" data-lines aria-live="polite">
+          <p class="ticket__empty">Todavía no elegiste nada. Suma productos desde la carta.</p>
+        </div>
+
+        <form class="ticket__form" data-order-form novalidate>
+          <fieldset class="field field--choice">
+            <legend>¿Cómo lo recibes?</legend>
+            <label><input type="radio" name="mode" value="recojo" checked> Recojo en el local</label>
+            <label><input type="radio" name="mode" value="entrega"> Entrega a domicilio</label>
+          </fieldset>
+          <p class="ticket__hint" data-delivery-hint hidden>La entrega y su costo se coordinan en el chat según tu zona.</p>
+
+          <div class="field">
+            <label for="f-day">¿Para cuándo?</label>
+            <input id="f-day" name="day" type="date">
+          </div>
+          <div class="field">
+            <label for="f-name">Tu nombre</label>
+            <input id="f-name" name="name" type="text" autocomplete="given-name" maxlength="60">
+          </div>
+          <div class="field">
+            <label for="f-notes">Notas <span class="field__opt">(opcional)</span></label>
+            <textarea id="f-notes" name="notes" rows="2" maxlength="280" placeholder="Ej.: torta para cumpleaños, sin nueces en una tajada…"></textarea>
+          </div>
+
+          <details class="ticket__preview">
+            <summary>Ver el mensaje que se enviará</summary>
+            <pre data-preview></pre>
+          </details>
+
+          <button class="btn btn--dark ticket__send" type="submit">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+            <span data-send-label>Escribir por WhatsApp</span>
+          </button>
+          <p class="ticket__legal">Se abre WhatsApp con el mensaje listo. Nada se cobra en esta web.</p>
+        </form>
+      </aside>
+    </section>
+
+    <!-- Encargos: carrot cake entera para ocasiones -->
+    <section class="occasions" id="encargos" aria-labelledby="encargos-title" data-anim>
+      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+        <defs><path id="badge-circle" d="M100 100 m-74 0 a74 74 0 1 1 148 0 a74 74 0 1 1 -148 0"/></defs>
+        <text><textPath href="#badge-circle">carrot cake por encargo · SAIRA · Cieneguilla ·</textPath></text>
+        <circle cx="100" cy="100" r="34"/>
+      </svg>
+      <div class="occasions__head">
+        <h2 id="encargos-title" class="h2">Encargos para tu ocasión</h2>
+        <p>Pide la carrot cake entera para compartir. Tamaño, anticipación y precio se confirman por WhatsApp.</p>
+      </div>
+      <ul class="occasions__list">
+        <li>
+          <h3>Cumpleaños</h3>
+          <p>Una torta entera para soplar velas en casa o en la terraza.</p>
+          <a class="btn btn--dark" href="#" data-wa="Hola SAIRA, quiero encargar una carrot cake entera para un cumpleaños. ¿Qué tamaños tienen y con cuánta anticipación debo pedirla?">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Consultar para cumpleaños</span>
+          </a>
+        </li>
+        <li>
+          <h3>Reuniones</h3>
+          <p>Para la oficina, la familia o una tarde con amigos.</p>
+          <a class="btn btn--dark" href="#" data-wa="Hola SAIRA, quiero encargar carrot cake para una reunión. ¿Qué opciones tienen?">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Consultar para reuniones</span>
+          </a>
+        </li>
+        <li>
+          <h3>Para regalar</h3>
+          <p>Una caja para sorprender a alguien. Coordina recojo o entrega.</p>
+          <a class="btn btn--dark" href="#" data-wa="Hola SAIRA, quiero regalar una carrot cake. ¿Cómo puedo encargarla?">
+            <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Consultar para regalo</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Opiniones reales (Google Maps) -->
+    <section class="voices" aria-labelledby="voces-title" data-anim>
+      <span class="voices__quote" aria-hidden="true">“</span>
+      <div class="voices__head">
+        <h2 id="voces-title" class="h2">Lo que dicen en Google</h2>
+        <p class="voices__score"><strong>4,6</strong> de 5 · 9 reseñas en Google Maps</p>
+      </div>
+      <div class="voices__list">
+        <figure>
+          <blockquote>«La carrot cake es super buena y más para los amantes de los frutos secos.»</blockquote>
+          <figcaption>Sofía T., reseña en Google Maps</figcaption>
+        </figure>
+        <figure>
+          <blockquote>«Ambiente cálido y perfecto para disfrutar de un buen café.»</blockquote>
+          <figcaption>Victor S., reseña en Google Maps</figcaption>
+        </figure>
+      </div>
+      <div class="voices__actions">
+        <a class="btn btn--line" href="https://www.google.com/maps/search/?api=1&amp;query=SAIRA%20cafe%20%26%20bakery%20Cieneguilla" target="_blank" rel="noopener">Ver todas las reseñas</a>
+        <a class="btn btn--wa" href="https://www.google.com/maps/search/?api=1&amp;query=SAIRA%20cafe%20%26%20bakery%20Cieneguilla" target="_blank" rel="noopener">Dejar una reseña</a>
+      </div>
+    </section>
+
+    <!-- 3 · La terraza: el lugar, horario y cómo llegar -->
+    <section class="place" id="terraza" aria-labelledby="terraza-title" data-anim>
+      <div class="sky" aria-hidden="true">
+        <i class="sky__sun"></i>
+        <i class="sky__cloud" style="--y:8%;--d:70s;--s:1"></i>
+        <i class="sky__cloud" style="--y:22%;--d:95s;--s:.7;--delay:-40s"></i>
+        <i class="sky__cloud" style="--y:4%;--d:120s;--s:1.3;--delay:-80s"></i>
+      </div>
+      <figure class="place__figure" data-terrace>
+        <!-- js/app.js inserta la imagen de la terraza si existe en assets/ -->
+        <div class="place__wall" aria-hidden="true"></div>
+        <figcaption class="place__note" data-terrace-note hidden>Ilustración 3D conceptual de la terraza</figcaption>
+      </figure>
+
+      <div class="place__info">
+        <h2 id="terraza-title" class="h2">La terraza</h2>
+        <p class="place__text">Muro de piedra, mesas al aire libre y la tarde del valle. Para quedarte con un café o pasar a recoger tu pedido.</p>
+
+        <dl class="facts">
+          <div><dt>Dónde</dt><dd>Miguel Grau, Cieneguilla, Lima <button class="link-btn" type="button" data-copy="SAIRA cafe & bakery, Miguel Grau, Cieneguilla 15593, Lima">Copiar dirección</button></dd></div>
+          <div><dt>Horario</dt><dd>Cierra a las 10 p. m.<small>Según Google Maps</small></dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+51980820574">980 820 574</a></dd></div>
+          <div><dt>En Google</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=SAIRA%20cafe%20%26%20bakery%20Cieneguilla" target="_blank" rel="noopener">4,6 de 5 con 9 reseñas</a></dd></div>
+        </dl>
+
+        <div class="place__actions">
+          <a class="btn btn--dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=-12.1125719,-76.8210869" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn--line" href="tel:+51980820574">Llamar</a>
+          <a class="btn btn--line" href="https://waze.com/ul?ll=-12.1125719,-76.8210869&amp;navigate=yes" target="_blank" rel="noopener">Abrir en Waze</a>
+        </div>
+      </div>
+
+      <div class="place__map" data-map>
+        <div class="place__map-gate">
+          <p>El mapa lo muestra Google y usa sus cookies.</p>
+          <button class="btn btn--dark" type="button" data-map-load>Mostrar mapa de Google</button>
+          <a href="cookies.html">Más sobre cookies</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="faq" id="preguntas" aria-labelledby="faq-title" data-anim>
+      <h2 id="faq-title" class="h2">Preguntas frecuentes</h2>
+      <div class="faq__list">
+        <details>
+          <summary>¿Puedo pagar en la web?</summary>
+          <p>No. La web solo arma tu mensaje. El total y la forma de pago se coordinan por WhatsApp con el local.</p>
+        </details>
+        <details>
+          <summary>¿Hacen entregas a domicilio?</summary>
+          <p>Elige «Entrega a domicilio» en tu pedido y SAIRA te confirmará si llega a tu zona y su costo.</p>
+        </details>
+        <details>
+          <summary>¿Con cuánta anticipación pido una torta entera?</summary>
+          <p>Depende del tamaño y del día. Escríbenos con la fecha que necesitas y te confirmamos.</p>
+        </details>
+        <details>
+          <summary>¿Dónde están y hasta qué hora atienden?</summary>
+          <p>En la calle Miguel Grau, Cieneguilla. Según Google Maps cierran a las 10 p. m.; confirma el horario del día por WhatsApp.</p>
+        </details>
+        <details>
+          <summary>¿Puedo quedarme a tomar algo?</summary>
+          <p>Sí, hay terraza con mesas al aire libre para disfrutar tu café y tu tajada.</p>
+        </details>
+      </div>
+      <p class="faq__more">¿Otra duda? <a href="#" data-wa="Hola SAIRA, tengo una consulta:">Escríbenos por WhatsApp</a></p>
+    </section>
+
+    <!-- Cierre -->
+    <section class="closer" aria-labelledby="closer-title" data-anim>
+      <h2 id="closer-title" class="closer__title">¿Se te antojó?</h2>
+      <div class="closer__actions">
+        <a class="btn btn--wa btn--lg" href="#carta">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Armar mi pedido</span>
+        </a>
+        <button class="btn btn--ghost btn--lg" type="button" data-share>Compartir SAIRA</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot" data-anim>
+    <p class="foot__mark" aria-hidden="true"><span>S</span><span>A</span><span>I</span><span>R</span><span>A</span></p>
+    <div class="foot__grid">
+      <div>
+        <h2 class="foot__h">Visítanos</h2>
+        <p>Miguel Grau, Cieneguilla 15593, Lima</p>
+        <p>Cierra a las 10 p. m. (según Google Maps)</p>
+        <p><a href="tel:+51980820574">980 820 574</a></p>
+      </div>
+      <nav aria-label="Secciones del sitio">
+        <h2 class="foot__h">Navega</h2>
+        <a href="#como-pedir">Cómo pedir</a>
+        <a href="#carta">Carta y pedido</a>
+        <a href="#encargos">Encargos</a>
+        <a href="#terraza">La terraza</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
+      </nav>
+      <nav aria-label="Información legal">
+        <h2 class="foot__h">Legal</h2>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="cookies.html">Política de cookies</a>
+        <a class="foot__libro" href="libro-reclamaciones.html">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6h10a4 4 0 0 1 4 4v16a3 3 0 0 0-3-3H4zM28 6H18a4 4 0 0 0-4 4v16a3 3 0 0 1 3-3h11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Libro de Reclamaciones
+        </a>
+      </nav>
+      <div class="foot__cta">
+        <a class="btn btn--wa" href="#carta">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span>Armar mi pedido</span>
+        </a>
+        <button class="btn btn--ghost" type="button" data-share>Compartir</button>
+        <a class="btn btn--ghost" href="#inicio">Volver arriba</a>
+      </div>
+    </div>
+    <div class="foot__legal">
+      <p>© 2026 SAIRA cafe &amp; bakery. Razón social: <span class="pending">[PENDIENTE]</span> · RUC: <span class="pending">[PENDIENTE]</span></p>
+      <p>Imágenes de la portada y la terraza: ilustración 3D conceptual.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (escritorio y celular sin pedido en curso) -->
+  <a class="fab" href="#" data-wa="Hola SAIRA, quiero hacer una consulta." data-fab aria-label="Escribir a SAIRA por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>
+  </a>
+
+  <p class="toast" role="status" aria-live="polite" data-toast></p>
+
+  <!-- Barra de pedido en celular: aparece cuando hay productos y el resumen no está a la vista -->
+  <a class="dock" href="#tu-pedido" data-dock>
+    <span data-dock-count>0 productos</span>
+    <strong>Revisar pedido</strong>
+  </a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  </svg>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Libro de Reclamaciones | SAIRA cafe & bakery</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#3A281C">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top top--legal is-solid">
+    <a class="top__brand" href="index.html" aria-label="SAIRA cafe & bakery, volver al inicio">
+      <span class="top__name">SAIRA</span>
+      <span class="top__kind">cafe &amp; bakery</span>
+    </a>
+    <a class="btn btn--wa top__cta" href="index.html#carta">
+      <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+      <span>Pedir</span>
+    </a>
+  </header>
+  <main class="legal">
+    <a class="back" href="index.html">Volver a SAIRA</a>
+
+    <h1>Libro de Reclamaciones</h1>
+    <p class="updated">SAIRA cafe &amp; bakery. Razón social: <span class="pending">[PENDIENTE]</span>. RUC: <span class="pending">[PENDIENTE]</span>.<br>Miguel Grau, Cieneguilla 15593, Lima.</p>
+    <p>Conforme al Código de Protección y Defensa del Consumidor, contamos con un Libro de Reclamaciones a tu disposición. Completa la hoja y envíanosla para darte respuesta.</p>
+
+    <form class="libro-form" id="libro" novalidate>
+      <div class="form-summary" id="form-summary" role="alert" tabindex="-1" hidden></div>
+
+      <fieldset>
+        <legend>1. Tus datos</legend>
+        <div class="field">
+          <label for="nombre">Nombres y apellidos</label>
+          <input id="nombre" name="nombre" autocomplete="name" required>
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label for="tipo_doc">Tipo de documento</label>
+            <select id="tipo_doc" name="tipo_doc" required>
+              <option value="">Elige uno</option>
+              <option>DNI</option>
+              <option>Carné de extranjería</option>
+              <option>Pasaporte</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="num_doc">Número de documento</label>
+            <input id="num_doc" name="num_doc" inputmode="numeric" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="domicilio">Domicilio</label>
+          <input id="domicilio" name="domicilio" autocomplete="street-address" required>
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="correo">Correo electrónico</label>
+            <input id="correo" name="correo" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <label class="check">
+          <input type="checkbox" id="menor" name="menor">
+          <span>Soy menor de edad</span>
+        </label>
+        <div class="field" id="apoderado-field" hidden>
+          <label for="apoderado">Nombre del padre, madre o apoderado</label>
+          <input id="apoderado" name="apoderado">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Qué compraste</legend>
+        <div class="choices">
+          <label class="choice"><input type="radio" name="bien" value="Producto" required><span>Producto</span></label>
+          <label class="choice"><input type="radio" name="bien" value="Servicio"><span>Servicio</span></label>
+        </div>
+        <div class="grid-2">
+          <div class="field">
+            <label for="monto">Monto reclamado en soles (opcional)</label>
+            <input id="monto" name="monto" inputmode="decimal" placeholder="0.00">
+          </div>
+          <div class="field">
+            <label for="descripcion">Producto o servicio</label>
+            <input id="descripcion" name="descripcion" placeholder="Ej.: carrot cake entera por encargo" required>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>3. Tu reclamo o queja</legend>
+        <div class="choices">
+          <label class="choice">
+            <input type="radio" name="tipo" value="Reclamo" required>
+            <span>Reclamo<small>No estás conforme con el producto o servicio.</small></span>
+          </label>
+          <label class="choice">
+            <input type="radio" name="tipo" value="Queja">
+            <span>Queja<small>No estás conforme con algo distinto al producto o servicio, o con la atención recibida.</small></span>
+          </label>
+        </div>
+        <div class="field">
+          <label for="detalle">Qué pasó</label>
+          <textarea id="detalle" name="detalle" required></textarea>
+        </div>
+        <div class="field">
+          <label for="pedido">Qué solicitas</label>
+          <textarea id="pedido" name="pedido" required></textarea>
+        </div>
+      </fieldset>
+
+      <label class="check">
+        <input type="checkbox" id="acepto" name="acepto" required>
+        <span>Declaro que los datos son verdaderos y acepto que se traten según la <a href="privacidad.html">Política de privacidad</a> para atender mi solicitud.</span>
+      </label>
+
+      <p><small>Presentar un reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el Indecopi. El proveedor debe responder en el plazo que establece la normativa vigente <span class="pending">[PENDIENTE: confirmar plazo con Indecopi]</span>.</small></p>
+
+      <div><button class="btn btn--dark btn--lg" type="submit">Generar hoja de reclamación</button></div>
+    </form>
+
+    <section class="sheet" id="sheet" hidden aria-labelledby="sheet-title" tabindex="-1">
+      <h2 id="sheet-title">Hoja de reclamación</h2>
+      <p>Tu hoja está lista. Envíala a SAIRA por WhatsApp y guarda una copia para ti.</p>
+      <dl id="sheet-data"></dl>
+      <div class="sheet-actions">
+        <a class="btn btn--wa" id="sheet-wa" href="#" target="_blank" rel="noopener">Enviar a SAIRA por WhatsApp</a>
+        <button class="btn btn--line" type="button" id="sheet-print">Imprimir o guardar PDF</button>
+        <button class="btn btn--line" type="button" id="sheet-edit">Corregir datos</button>
+      </div>
+      <p><small><span class="pending">[PENDIENTE: el negocio debe numerar y conservar cada hoja, y enviar copia al consumidor. Un sistema con registro automático requiere un servidor.]</span></small></p>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="foot__grid">
+      <div>
+        <h2 class="foot__h">SAIRA cafe &amp; bakery</h2>
+        <p>Razón social: <span class="pending">[PENDIENTE]</span></p>
+        <p>RUC: <span class="pending">[PENDIENTE]</span></p>
+        <p>Miguel Grau, Cieneguilla 15593, Lima, Perú</p>
+        <p><a href="tel:+51980820574">980 820 574</a></p>
+      </div>
+      <nav aria-label="Información legal">
+        <h2 class="foot__h">Legal</h2>
+        <a href="privacidad.html">Política de privacidad</a>
+        <a href="terminos.html">Términos y condiciones</a>
+        <a href="cookies.html">Política de cookies</a>
+        <a class="foot__libro" href="libro-reclamaciones.html" aria-current="page">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6h10a4 4 0 0 1 4 4v16a3 3 0 0 0-3-3H4zM28 6H18a4 4 0 0 0-4 4v16a3 3 0 0 1 3-3h11z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          Libro de Reclamaciones
+        </a>
+      </nav>
+    </div>
+    <div class="foot__legal"><p>© 2026 SAIRA cafe &amp; bakery.</p></div>
+  </footer>
+  <script src="legal.js" defer></script>
+</body>
+</html>
